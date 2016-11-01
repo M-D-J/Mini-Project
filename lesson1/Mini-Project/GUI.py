@@ -1,3 +1,4 @@
+# Dit is de GUI voor ons ns kaartautomaat systeem
 from tkinter import *
 
 def clicked1():
@@ -40,3 +41,5 @@ button2.place(x=410, y=400)
 
 
 root.mainloop()
+# test
+# test
