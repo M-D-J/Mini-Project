@@ -12,7 +12,7 @@ def clicked2():
     toplevel.focus_set()
 
 root = Tk()
-
+root.title('NS beginscherm')
 beginscherm = PhotoImage(file="beginscherm.png")
 achtergrondscherm = PhotoImage(file="achtergrond.png")
 
