@@ -6,22 +6,15 @@ def clicked1():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Utrecht')
     toplevel.focus_set()
-    T = Text(root, height=2, width=30)
-    T.pack()
-    quote= os.system('NS.py')
-    T.insert(END, quote)
+    os.system('NS.py')
 
 def clicked2():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Amsterdam')
     toplevel.focus_set()
 
-    
-
 root = Tk()
 root.title('NS beginscherm')
-
-
 beginscherm = PhotoImage(file="beginscherm.png")
 achtergrondscherm = PhotoImage(file="achtergrond.png")
 
