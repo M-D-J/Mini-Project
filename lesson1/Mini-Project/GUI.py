@@ -1,3 +1,4 @@
+# Dit is de GUI voor ons ns kaartautomaat systeem
 from tkinter import *
 
 def clicked1():
