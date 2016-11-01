@@ -7,7 +7,7 @@ def clicked1():
     toplevel.focus_set()
 
 def clicked2():
-    toplevel = Toplevel()
+    toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Amsterdam')
     toplevel.focus_set()
 
@@ -22,7 +22,7 @@ label.pack()
 
 button1 = Button(master=root,
                  text='Reisinformatie station Utrecht',
-                 background='blue',
+                 background='darkblue',
                  foreground='white',
                  font=('Helvetica', 12, 'bold italic'),
                  command=clicked1)
@@ -31,7 +31,7 @@ button1.place(x=150, y=400)
 
 button2 = Button(master=root,
                  text='Reisinformatie station Amsterdam',
-                 background='blue',
+                 background='darkblue',
                  foreground='white',
                  font=('Helvetica', 12, 'bold italic'),
                  command=clicked2)
