@@ -31,7 +31,7 @@ button1.place(x=150, y=400)
 
 button2 = Button(master=root,
                  text='Reisinformatie station Amsterdam',
-                 background='darkblue',
+                 background='blue',
                  foreground='white',
                  font=('Helvetica', 12, 'bold italic'),
                  command=clicked2)
