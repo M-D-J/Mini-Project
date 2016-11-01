@@ -2,6 +2,7 @@
 import os
 from tkinter import *
 
+
 def clicked1():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Utrecht')
@@ -14,8 +15,11 @@ def clicked2():
     toplevel.focus_set()
     os.system('NSAsmterdam.py')
 
+
 root = Tk()
 root.title('NS beginscherm')
+
+
 beginscherm = PhotoImage(file="beginscherm.png")
 achtergrondscherm = PhotoImage(file="achtergrond.png")
 
