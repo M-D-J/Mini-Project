@@ -21,7 +21,6 @@ root.title('NS beginscherm')
 
 
 beginscherm = PhotoImage(file="beginscherm.png")
-achtergrondscherm = PhotoImage(file="achtergrond.png")
 
 
 label = Label(master=root, image=beginscherm)
