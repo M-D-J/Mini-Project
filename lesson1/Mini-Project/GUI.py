@@ -33,7 +33,7 @@ button1 = Button(master=root,
                  foreground='white',
                  font=('Helvetica', 12, 'bold italic'),
                  command=clicked1)
-button1.place(x=150, y=400)
+button1.place(x=120, y=400)
 
 
 button2 = Button(master=root,
