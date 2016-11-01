@@ -12,6 +12,7 @@ def clicked2():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Amsterdam')
     toplevel.focus_set()
+    os.system('NSAsmterdam.py')
 
 root = Tk()
 root.title('NS beginscherm')
