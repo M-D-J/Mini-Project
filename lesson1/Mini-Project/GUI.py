@@ -1,7 +1,8 @@
 from tkinter import *
 
 def clicked1():
-    toplevel = Toplevel()
+    toplevel = Toplevel(master=root,
+                        background='yellow')
     toplevel.title('Reisinformatie Utrecht')
     toplevel.focus_set()
 
