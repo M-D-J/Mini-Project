@@ -7,7 +7,7 @@ def clicked1():
     toplevel.focus_set()
 
 def clicked2():
-    toplevel = Toplevel()
+    toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Amsterdam')
     toplevel.focus_set()
 
