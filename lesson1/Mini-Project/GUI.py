@@ -2,11 +2,9 @@
 from tkinter import *
 
 def clicked1():
-    root1 = Tk()
-    toplevel = Toplevel()
+    toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Utrecht')
     toplevel.focus_set()
-    bg = Bg(master=root1)
 
 def clicked2():
     toplevel = Toplevel()
@@ -41,5 +39,3 @@ button2.place(x=410, y=400)
 
 
 root.mainloop()
-# test
-# test
