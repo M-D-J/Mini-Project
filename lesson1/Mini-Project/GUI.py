@@ -1,8 +1,7 @@
 from tkinter import *
 
 def clicked1():
-    toplevel = Toplevel(master=root,
-                        background='yellow')
+    toplevel = Toplevel()
     toplevel.title('Reisinformatie Utrecht')
     toplevel.focus_set()
 
@@ -12,10 +11,10 @@ def clicked2():
     toplevel.focus_set()
 
 root = Tk()
-photo = PhotoImage(file="beginscherm.png")
+beginscherm = PhotoImage(file="beginscherm.png")
+kaleachtergrond = PhotoImage(file="achtergrond.png")
 
-
-label = Label(master=root, image=photo)
+label = Label(master=root, image=beginscherm)
 label.pack()
 
 button1 = Button(master=root,
