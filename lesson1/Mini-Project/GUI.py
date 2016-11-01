@@ -1,10 +1,12 @@
 # Dit is de GUI voor ons ns kaartautomaat systeem
+import os
 from tkinter import *
 
 def clicked1():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Utrecht')
     toplevel.focus_set()
+    os.system('NS.py')
 
 def clicked2():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
