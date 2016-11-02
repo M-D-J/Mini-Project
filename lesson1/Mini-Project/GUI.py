@@ -50,13 +50,12 @@ def clicked1():
     toplevel.focus_set()
     toplevel.iconbitmap('nsicon.ico')
 
-    ###Voegt een vertikale scrollbar toe aan de rechterkant###
-    vscrollbar = Scrollbar(toplevel,orient=VERTICAL)
-    vscrollbar.pack(fill=Y, side=RIGHT, expand=FALSE)
+    ###Scrollbar toevoegen###
+    s = Scrollbar(toplevel)
+    s.pack(side=RIGHT, fill=Y)
 
-    ###Voegt de scrollbar toe aan het scherm en geeft een achtergrond met kleur en tekst###
+    ###Voegt een achtergrond met kleur en tekst toe aan het scherm###
     canvas = Canvas(toplevel,bd=0, highlightthickness=0,
-                    yscrollcommand=vscrollbar.set,
                     background='#FECE22',width=775, height=600)
     canvas.pack(fill=BOTH, expand=TRUE)                             ###zorgt dat gehele scherm gevuld wordt####
     canvas_id = canvas.create_text(10, 10, anchor='nw')
@@ -69,6 +68,10 @@ def clicked1():
                     font=('Helvetica', 12,), foreground='darkblue', borderwidth='5')
     tekstvak.insert(INSERT, gegevens)
     tekstvak.place(x=10, y=40)
+
+    ###scrollbar configuren###
+    s.config(command=tekstvak.yview)
+    tekstvak.config(yscrollcommand=s.set)
 
     ###Geeft actie aan om de toplevel windows te sluiten###
     def Close():
@@ -88,13 +91,12 @@ def clicked2():
     toplevel.focus_set()
     toplevel.iconbitmap('nsicon.ico')
 
-    ###Voegt een vertikale scrollbar toe aan de rechterkant###
-    vscrollbar = Scrollbar(toplevel,orient=VERTICAL)
-    vscrollbar.pack(fill=Y, side=RIGHT, expand=FALSE)
+    ###Scrollbar toevoegen###
+    s = Scrollbar(toplevel)
+    s.pack(side=RIGHT, fill=Y)
 
-    ###Voegt de scrollbar toe aan het scherm en geeft een achtergrond met kleur en tekst###
+    ###Voegt een achtergrond met kleur en tekst toe aan het scherm###
     canvas = Canvas(toplevel,bd=0, highlightthickness=0,
-                    yscrollcommand=vscrollbar.set,
                     background='#FECE22',width=775, height=600)
     canvas.pack(fill=BOTH, expand=TRUE)                             ###zorgt dat gehele scherm gevuld wordt####
     canvas_id = canvas.create_text(10, 10, anchor='nw')
@@ -107,6 +109,10 @@ def clicked2():
                     font=('Helvetica', 12,), foreground='#01236a', borderwidth='5')
     tekstvak.insert(INSERT, gegevens)
     tekstvak.place(x=10, y=40)
+
+    ###scrollbar configuren###
+    s.config(command=tekstvak.yview)
+    tekstvak.config(yscrollcommand=s.set)
 
     ###Geeft actie aan om de toplevel windows te sluiten###
     def Close():
