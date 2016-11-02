@@ -31,9 +31,6 @@ def reisInfo(Station2):
     vertrekXML = xmltodict.parse(response.text)
     gegevens = ''
 
-    print('Dit zijn de vertrekkende treinen:')
-
-
     for vertrek in vertrekXML ['ActueleVertrekTijden']['VertrekkendeTrein']:
         eindbestemming = vertrek['EindBestemming']
 
@@ -74,9 +71,6 @@ def clicked1():
     tekstvak.insert(INSERT, gegevens)
     tekstvak.place(x=10, y=40)
 
-    #Scrollbar
-    scrollbar = Scrollbar(clicked1)
-    scrollbar.pack(side="right", fill=Y, expand=False)
 
 ###Wat er gaat gebeuren nadat er op de knop is gedrukt voor info over Amsterdam##
 def clicked2():
@@ -105,7 +99,6 @@ def clicked2():
                     font=('Helvetica', 12,), foreground='#01236a', borderwidth='5')
     tekstvak.insert(INSERT, gegevens)
     tekstvak.place(x=10, y=40)
-    tekstvak.pack()
 
 
 ###Hoofdscherm###
