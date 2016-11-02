@@ -13,9 +13,6 @@ def reisInfo(Station1):
         vertrekXML = xmltodict.parse(response.text)
         gegevens = ''
 
-        print('Dit zijn de vertrekkende treinen:')
-
-
         for vertrek in vertrekXML ['ActueleVertrekTijden']['VertrekkendeTrein']:
             eindbestemming = vertrek['EindBestemming']
 
