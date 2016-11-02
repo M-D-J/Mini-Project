@@ -4,6 +4,7 @@ import requests
 import xmltodict
 
 
+###informatie ophalen van traject Utrecht###
 def reisInfo(Station1):
 
         auth_details = ('mike.m.dejong@student.hu.nl', 'H4cctzd6FrJVd55syghnqpr9B3yCgb-GzIiXhuqZHI6J5fNR5zCwKQ')
@@ -23,6 +24,8 @@ def reisInfo(Station1):
             gegevens += str('Om '+vertrektijd+' vertrekt er een trein naar '+ eindbestemming + '\n')
         return gegevens
 
+
+###informatie ophalen van traject Amsterdam###
 def reisInfo(Station2):
 
     auth_details = ('mike.m.dejong@student.hu.nl', 'H4cctzd6FrJVd55syghnqpr9B3yCgb-GzIiXhuqZHI6J5fNR5zCwKQ')
@@ -39,6 +42,7 @@ def reisInfo(Station2):
         gegevens += str('Om '+vertrektijd+' vertrekt er een trein naar '+ eindbestemming + '\n')
     return gegevens
 
+
 ###Wat er gaat gebeuren nadat er op de knop is gedrukt voor info over Utrecht###
 def clicked1():
 
@@ -49,11 +53,9 @@ def clicked1():
     toplevel.focus_set()
     toplevel.iconbitmap('nsicon.ico')
 
-
     ###Voegt een vertikale scrollbar toe aan de rechterkant###
     vscrollbar = Scrollbar(toplevel,orient=VERTICAL)
     vscrollbar.pack(fill=Y, side=RIGHT, expand=FALSE)
-
 
     ###Voegt de scrollbar toe aan het scherm en geeft een achtergrond met kleur en tekst###
     canvas = Canvas(toplevel,bd=0, highlightthickness=0,
@@ -71,6 +73,15 @@ def clicked1():
     tekstvak.insert(INSERT, gegevens)
     tekstvak.place(x=10, y=40)
 
+    ###Geeft actie aan om de toplevel windows te sluiten###
+    def Close():
+        toplevel.deiconify()
+        toplevel.destroy()
+
+    ###Knop om terug te keren naar het beginscherm####
+    stopbutton = Button(master=toplevel, font=('Frutiger', 10, 'bold'), foreground='white', background='red',
+                        text='Terugkeren naar \nhet beginscherm', command=Close)
+    stopbutton.place(x=640, y=540)
 
 ###Wat er gaat gebeuren nadat er op de knop is gedrukt voor info over Amsterdam##
 def clicked2():
@@ -100,6 +111,15 @@ def clicked2():
     tekstvak.insert(INSERT, gegevens)
     tekstvak.place(x=10, y=40)
 
+    ###Geeft actie aan om de toplevel windows te sluiten###
+    def Close():
+        toplevel.deiconify()
+        toplevel.destroy()
+
+    ###Knop om terug te keren naar het beginscherm####
+    stopbutton = Button(master=toplevel, font=('Frutiger', 10, 'bold'), foreground='white', background='red',
+                        text='Terugkeren naar \nhet beginscherm', command=Close)
+    stopbutton.place(x=640, y=540)
 
 ###Hoofdscherm###
 root = Tk()
