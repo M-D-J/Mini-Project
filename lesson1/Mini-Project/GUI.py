@@ -1,6 +1,10 @@
 ###Dit is de GUI voor ons ns kaartautomaat systeem###
 from tkinter import *
-import os
+import requests
+import xmltodict
+import NS
+import NSAsmterdam
+from tkinter.messagebox import showinfo
 
 
 ###Wat er gaat gebeuren nadat er op de knop is gedrukt voor info over Utrecht###
@@ -9,6 +13,7 @@ def clicked1():
     toplevel = Toplevel(root)
     toplevel.title('Reisinformatie Utrecht')
     toplevel.focus_set()
+    toplevel.iconbitmap('nsicon.ico')
 
     ###Voegt een vertikale scrollbar toe aan de rechterkant###
     vscrollbar = Scrollbar(toplevel,orient=VERTICAL)
@@ -22,12 +27,18 @@ def clicked1():
     canvas_id = canvas.create_text(10, 10, anchor='nw')
     canvas.itemconfig(canvas_id, font=('Helvetica', 16, 'bold italic'), fill='darkblue')
     canvas.insert(canvas_id, 20, 'Dit zijn de vertrek tijden van de treinen in het traject Utrecht:\n')
-    os.system('NS.py')
 
+    ###voegt tekstvak toe####
+    tekstvak = Text(toplevel, height=25, width=75, background='darkblue',
+                    font=('Helvetica', 12,), foreground='white')
+    tekstvak.place(x=10, y=40)
+
+###Wat er gaat gebeuren nadat er op de knop is gedrukt voor info over Amsterdam##
 def clicked2():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
     toplevel.title('Reisinformatie Amsterdam')
     toplevel.focus_set()
+    toplevel.iconbitmap('nsicon.ico')
 
     ###Voegt een vertikale scrollbar toe aan de rechterkant###
     vscrollbar = Scrollbar(toplevel,orient=VERTICAL)
@@ -41,13 +52,16 @@ def clicked2():
     canvas_id = canvas.create_text(10, 10, anchor='nw')
     canvas.itemconfig(canvas_id, font=('Helvetica', 16, 'bold italic'), fill='darkblue')
     canvas.insert(canvas_id, 20, 'Dit zijn de vertrek tijden van de treinen in het traject Amsterdam:\n')
-    os.system('NSAsmterdam.py')
 
+    ###voegt tekstvak toe####
+    tekstvak = Text(toplevel, height=25, width=75, background='darkblue',
+                    font=('Helvetica', 12,), foreground='white')
+    tekstvak.place(x=10, y=40)
 
 ###Hoofdscherm###
 root = Tk()
 root.title('NS beginscherm')
-
+root.iconbitmap('nsicon.ico')
 
 beginscherm = PhotoImage(file="beginscherm.png")
 
