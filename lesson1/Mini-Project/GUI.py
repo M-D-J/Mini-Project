@@ -33,6 +33,12 @@ def clicked1():
                     font=('Helvetica', 12,), foreground='white')
     tekstvak.place(x=10, y=40)
 
+    #Stopbutton
+    stopbutton = Button(master=toplevel, font=('Frutiger', 10, 'bold'), foreground='white', background='red',
+                        text='Stoppen \n en naar beginscherm')
+    stopbutton.place(x=600, y=545)
+
+
 ###Wat er gaat gebeuren nadat er op de knop is gedrukt voor info over Amsterdam##
 def clicked2():
     toplevel = Toplevel(master=root, background='#FECE22',width=794, height=600)
