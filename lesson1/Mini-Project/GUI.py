@@ -23,21 +23,21 @@ def reisInfo(Station1):
 
 
 ###informatie ophalen van traject Amsterdam###
-def reisInfo(Station2):
+def reisInfo2(Station2):
 
     auth_details = ('mike.m.dejong@student.hu.nl', 'H4cctzd6FrJVd55syghnqpr9B3yCgb-GzIiXhuqZHI6J5fNR5zCwKQ')
     api_url = 'http://webservices.ns.nl/ns-api-avt?station=amsterdam'
     response = requests.get(api_url, auth=auth_details)
     vertrekXML = xmltodict.parse(response.text)
-    gegevens = ''
+    gegevens2 = ''
 
     for vertrek in vertrekXML ['ActueleVertrekTijden']['VertrekkendeTrein']:
         eindbestemming = vertrek['EindBestemming']
 
         vertrektijd = vertrek['VertrekTijd']
         vertrektijd = vertrektijd[11:16]
-        gegevens += str('Om '+vertrektijd+' vertrekt er een trein naar '+ eindbestemming + '\n')
-    return gegevens
+        gegevens2 += str('Om '+vertrektijd+' vertrekt er een trein naar '+ eindbestemming + '\n')
+    return gegevens2
 
 
 ###Wat er gaat gebeuren nadat er op de knop is gedrukt voor info over Utrecht###
@@ -104,10 +104,10 @@ def clicked2():
     canvas.insert(canvas_id, 20, 'Dit zijn de vertrektijden van de treinen vanuit Amsterdam Centraal:\n')
 
     ###voegt tekstvak toe####
-    gegevens = reisInfo(Station2)
+    gegevens2 = reisInfo2(Station2)
     tekstvak = Text(toplevel, height=25, width=75, background='white',
                     font=('Helvetica', 12,), foreground='#01236a', borderwidth='5')
-    tekstvak.insert(INSERT, gegevens)
+    tekstvak.insert(INSERT, gegevens2)
     tekstvak.place(x=10, y=40)
 
     ###scrollbar configuren###
