@@ -25,10 +25,13 @@ def reisInfo(Station1):
 ###informatie ophalen van traject Amsterdam###
 def reisInfo2(Station2):
 
+    ###Authenticatie (gebruikersnaam en wachtwoord) die gebruikt wordt voor het ophalen van de API###
     auth_details = ('mike.m.dejong@student.hu.nl', 'H4cctzd6FrJVd55syghnqpr9B3yCgb-GzIiXhuqZHI6J5fNR5zCwKQ')
     api_url = 'http://webservices.ns.nl/ns-api-avt?station=amsterdam'
     response = requests.get(api_url, auth=auth_details)
     vertrekXML = xmltodict.parse(response.text)
+
+    ###lege lijst waar de gegevens in worden gezet###
     gegevens2 = ''
 
     for vertrek in vertrekXML ['ActueleVertrekTijden']['VertrekkendeTrein']:
