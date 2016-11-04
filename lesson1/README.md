@@ -1,6 +1,6 @@
 #Reisinformatie NS gemaakt door groep 4:
 
-In de map Mini-Project staan de python en benodigde bestanden om de applicatie goed te laten runnen.
+In de map Mini-Project staan de python en benodigde bestanden om de applicatie goed te laten runnen. Open het bestand GUI.py en voer deze uit.
 
 In de map documenten staan al onze documenten: Voortgangsverslag, eindverslag, teamovereenkomst en de psds.
 
