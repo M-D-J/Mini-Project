@@ -1,6 +1,6 @@
 #Reisinformatie NS gemaakt door groep 4:
 
-Open de map Mini-Project > Open het bestand GUI.py > Voer dit bestand uit.
+#Gebruik#: Open de map Mini-Project > Open het bestand GUI.py > Voer dit bestand uit.
 
 
 In de map Mini-Project staan de python en benodigde bestanden om de applicatie goed te laten runnen. 
