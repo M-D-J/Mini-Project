@@ -173,7 +173,7 @@ def clicked3():
         canvas.pack(fill=BOTH, expand=TRUE)                             ###zorgt dat gehele scherm gevuld wordt####
         canvas_id = canvas.create_text(10, 10, anchor='nw')
         canvas.itemconfig(canvas_id, font=('Helvetica', 16, 'bold'), fill='#01236a')
-        canvas.insert(canvas_id, 20, 'These are the departures of the trains from Amsterdam Centraal:\n')
+        canvas.insert(canvas_id, 20, 'These are the departures of the trains from Utrecht Centraal:\n')
 
         ###voegt tekstvak toe####
         gegevens3 = reisInfo3(station3)
