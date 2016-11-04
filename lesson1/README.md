@@ -5,9 +5,7 @@ Open het programma Pycharm Edu op uw PC > Klik op 'VCS' in het menu > Klik op 'C
 
 Als het project is gekloond: Open de map Mini-Project > Open het bestand GUI.py > Voer dit bestand uit.
 
-
+#Extra:
 In de map Mini-Project staan de python en benodigde bestanden om de applicatie goed te laten runnen. 
-
 In de map documenten staan al onze documenten: Voortgangsverslag, eindverslag, teamovereenkomst en de psds.
-
 Dit project is gemaakt door groep 4: Siham, Benthe, Mike en Koen
