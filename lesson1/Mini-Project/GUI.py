@@ -216,7 +216,7 @@ def clicked3():
     def tripinfouamsterdam():
         station4 = 'Utrecht'
         toplevel = Toplevel(master=engels, background='#FECE22',width=794, height=600)
-        toplevel.title('Tripinformation Utrecht')
+        toplevel.title('Tripinformation Amsterdam')
         toplevel.focus_set()
         toplevel.iconbitmap('nsicon.ico')
 
